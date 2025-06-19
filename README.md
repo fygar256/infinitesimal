@@ -34,41 +34,44 @@ uses truerand.py module
 
 https://github.com/fygar256/truerandom
 
+
 ```infinitesimal.py
 #!/usr/bin/python3
 import truerand
 te=[ 'Paper','Scissors','Rock' ]
 def game(a,b):
-if a=='Paper':
-if b=='Paper':
-return 'draw'
-elif b=='Scissors':
-return 'lose'
-elif a=='Scissors':
-if b=='Paper':
-return 'win'
-elif b=='Scissors':
-return 'draw'
-elif:
-return 'lose'
-elif # a=='Rock'
-if b=='Paper':
-return 'lose'
-elif b=='scissors':
-return 'win'
-else:
-return 'draw'
+    if a=='Paper':
+        if b=='Paper':
+            return 'draw'
+        elif b=='Scissors':
+            return 'lose'
+        else:
+            return 'win'
+    elif a=='Scissors':
+        if b=='Paper':
+            return 'win'
+        elif b=='Scissors':
+            return 'draw'
+        else:
+            return 'lose'
+    else: # a=='Rock'
+        if b=='Paper':
+            return 'lose'
+        elif b=='Scissors':
+            return 'win'
+        else:
+            return 'draw'
 
 def main():
-while True:
-self=te[truerand.rand(1)%3]
-opp=te[truerand.rand(1)%3]
-result=game(self,opp)
-print(f"You:{self} Opponent:{opp} Result:{result}")
-if result=='draw': # Tie
-continue
-break
+    while True:
+        self=te[truerand.rand(1)%3]
+        opp=te[truerand.rand(1)%3]
+        result=game(self,opp)
+        print(f"Self:{self} Opponent:{opp} Result:{result}")
+        if result=='draw': # Tie
+            continue
+        break
 
 if __name__=="__main__":
-main()
+    main()
 ```
